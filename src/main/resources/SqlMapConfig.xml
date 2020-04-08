@@ -5,10 +5,10 @@
         <environment id="mysql">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql:///ssm"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/firefight?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai"/>
                 <property name="username" value="root"/>
-                <property name="password" value="root"/>
+                <property name="password" value="152388"/>
             </dataSource>
         </environment>
     </environments>

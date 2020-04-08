@@ -16,7 +16,7 @@ public class TestMybatis {
     @Test
     public void run1() throws IOException {
         User user =new User();
-        user.setName("朱星宇");
+        user.setUsername("朱星宇");
         user.setGender("男");
         // 加载配置文件
         InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
