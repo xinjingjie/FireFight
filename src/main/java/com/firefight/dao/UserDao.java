@@ -23,7 +23,7 @@ public interface UserDao {
     /*
         新增用户
          */
-    @Insert("Insert into user(username,gender,identify,password,telephone) values(#{username},#{gender},#{identify},#{password},#{telephone})")
+    @Insert("Insert into user(username,gender,identify,password,telephone,profile_id,location) values(#{username},#{gender},#{identify},#{password},#{telephone},#{profile_id},#{location})")
     public int addUser(User user);
     /*
         根据用户名查找用户
@@ -40,4 +40,9 @@ public interface UserDao {
      */
     @Select("select identify from user where username=#{username}")
     String getIdentifyByName(String username);
+    /*
+    根据name查找id
+     */
+    @Select("select uid from user where username=#{username}")
+    int getIdByName(String username);
 }

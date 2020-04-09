@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title> Home</title>
 	<!--/tags -->
@@ -28,49 +27,49 @@
 
 <body>
 
-<script type="text/javascript">
-	function login() {
+<!--<script type="text/javascript">-->
+<!--	function login() {-->
 
-		if ((document.getElementById("login-username").value=="")||(document.getElementById("login-password").value==""))
-		{
-			alert("请填写完整")
-			return;
-		}
-		$.ajax({
-			url:'/FireFight/api/user/userLogin',//地址
-			dataType:"text",//数据类型
-			cache:false,
-			async:false,
-			data:$('#loginForm').serialize(),
-			type:'POST',//类型
-			timeout:2000,//超时
-			//请求成功
-			success:function(data){
+<!--		if ((document.getElementById("login-username").value=="")||(document.getElementById("login-password").value==""))-->
+<!--		{-->
+<!--			alert("请填写完整")-->
+<!--			return;-->
+<!--		}-->
+<!--		$.ajax({-->
+<!--			url:'/FireFight/api/user/userLogin',//地址-->
+<!--			dataType:"text",//数据类型-->
+<!--			cache:false,-->
+<!--			async:false,-->
+<!--			data:$('#loginForm').serialize(),-->
+<!--			type:'POST',//类型-->
+<!--			timeout:2000,//超时-->
+<!--			//请求成功-->
+<!--			success:function(data){-->
 
-				if ("success"===data){
-					window.location.href="/FireFight/index";
+<!--				if ("success"===data){-->
+<!--					window.location.href="/FireFight/index";-->
 
-					document.getElementById("sign_Button").style.display="none";
-					document.getElementById("sign_Button").style.display="inline";
+<!--					document.getElementById("sign_Button").style.display="none";-->
+<!--					document.getElementById("sign_Button").style.display="inline";-->
 
-				}else
-				{
-					alert("登录失败");
-				}
-			},
-			//失败/超时
-			error:function(XMLHttpRequest,textStatus){
-				if(textStatus==='timeout'){
-					alert('請求超時');
-					setTimeout(function(){
-						alert('重新请求');
-					},2000);
-				}
-				//alert(errorThrown);
-			}
-		})
-	}
-</script>
+<!--				}else-->
+<!--				{-->
+<!--					alert("登录失败");-->
+<!--				}-->
+<!--			},-->
+<!--			//失败/超时-->
+<!--			error:function(XMLHttpRequest,textStatus){-->
+<!--				if(textStatus==='timeout'){-->
+<!--					alert('請求超時');-->
+<!--					setTimeout(function(){-->
+<!--						alert('重新请求');-->
+<!--					},2000);-->
+<!--				}-->
+<!--				//alert(errorThrown);-->
+<!--			}-->
+<!--		})-->
+<!--	}-->
+<!--</script>-->
 	<!-- header_top -->
 	<div class="header" id="home">
 		<div class="banner_header_top_agile_w3ls">
@@ -88,9 +87,10 @@
 									<div class="header_left" >
 						<ul>
 							<li><a class="shop" href="/FireFight/shop">Shop Now</a></li>
-<!--							<li ><a   href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-user" aria-hidden="true" style="display:none"></i></a></li>-->
-							<li ><a class="shop"  href="/FireFight/userProfile">账户</a></li>
+							<li ><a class="shop"  href="/FireFight/login">登录</a></li>
 
+							<!--							<li ><a class="shop"  href="/FireFight/userLogin">登录</a></li>-->
+<!--							<i class="fa fa-user" aria-hidden="true"></i>-->
 						</ul>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -429,7 +429,7 @@
 			<div class="container">
 				<div class="footer-grid-wthree-agiles">
 					<div class="col-md-5 footer-grid-wthree-agile">
-						<h3>关于我们</h3>
+						<h3>About us</h3>
 						<p>Lorem ipsum dolor sit consectetur elit. Nam eget egestas erat. In hachabi tasse platea dictumst. hachabi tasse platea
 							dictumst
 						</p>

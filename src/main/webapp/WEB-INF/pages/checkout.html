@@ -36,54 +36,47 @@
 				<nav class="navbar navbar-default">
 					<div class="navbar-header navbar-left">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-						<h1><a class="navbar-brand" href="index.html"> Surf Inn</a></h1>
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html"> 消防</a></h1>
 					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="header_left">
+					<div class="header_left" >
 						<ul>
-							<li>
-								<div class="surfcart surfcart2 cart cart box_1">
-									<form action="#" method="post" class="last">
-										<input type="hidden" name="cmd" value="_cart">
-										<input type="hidden" name="display" value="1">
-										<button class="top_surf_cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-									</form>
-								</div>
-							</li>
-							<li><a class="sign" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+							<li><a class="shop" href="/FireFight/shop">Shop Now</a></li>
+							<!--							<li ><a   href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-user" aria-hidden="true" style="display:none"></i></a></li>-->
+							<li ><a class="shop"  href="/FireFight/userProfile">账户</a></li>
 
 						</ul>
 					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
 						<div class="top_nav_left">
 							<nav class="cl-effect-15" id="cl-effect-15">
 								<ul>
-									<li><a href="index.html" data-hover="Home">Home</a></li>
-									<li><a href="about.html" data-hover="About">About</a></li>
-									<li><a href="blog.html" data-hover="Blog">Blog</a></li>
-									<li class="dropdown">
-										<a href="services.html" data-hover="Drop Down" class="dropdown-toggle" data-toggle="dropdown">Drop Down <b class="fa fa-angle-down"></b></a>
-										<ul class="dropdown-menu">
-											<li><a href="404.html">Services</a></li>
-											<li class="divider"></li>
-											<li><a class="s-menu" href="#">Pages <b class="fa fa-angle-right"></b></a>
-												<ul class="dropdown-menu sub-menu">
-													<li><a href="404.html">Error</a></li>
-													<li class="divider"></li>
-													<li><a href="gallery.html">Gallery</a></li>
-												</ul>
-											</li>
+									<li class="active"><a href="/FireFight/index" data-hover="主页">主页</a></li>
+									<li><a href="/FireFight/about" data-hover="关于">关于</a></li>
+									<li><a href="/FireFight/blog" data-hover="动态">动态</a></li>
+									<!--									<li class="dropdown">-->
+									<!--										<a href="services.html" data-hover="Drop Down" class="dropdown-toggle" data-toggle="dropdown">Drop Down <b class="fa fa-angle-down"></b></a>-->
+									<!--										<ul class="dropdown-menu">-->
+									<!--											<li><a href="404.html">Services</a></li>-->
+									<!--											<li class="divider"></li>-->
+									<!--											<li><a class="s-menu" href="#">Pages <b class="fa fa-angle-right"></b></a>-->
+									<!--												<ul class="dropdown-menu sub-menu">-->
+									<!--													<li><a href="404.html">Error</a></li>-->
+									<!--													<li class="divider"></li>-->
+									<!--													<li><a href="gallery.html">Gallery</a></li>-->
+									<!--												</ul>-->
+									<!--											</li>-->
 
-										</ul>
-									</li>
+									<!--										</ul>-->
+									<!--									</li>-->
 
-									<li><a href="Contact.html" data-hover="Contact">Contact</a></li>
+									<li><a href="/FireFight/contact" data-hover="联系我们">联系我们</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -108,18 +101,6 @@
 			</div>
 		</div>
 		<!-- banner -->
-		<div class="banner_inner">
-			<div class="services-breadcrumb">
-				<div class="inner_breadcrumb">
-
-					<ul class="short">
-						<li><a href="index.html">Home</a><i>|</i></li>
-						<li>Checkout</li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
 		<!--//banner -->
 
 		<!-- Modal1 -->
@@ -347,9 +328,9 @@
 	<footer>
 		<div class="footer-top-w3-agileits">
 			<div class="container">
-				<div class="footer-grid-wthree-agiles-w3layouts-agileits">
+				<div class="footer-grid-wthree-agiles">
 					<div class="col-md-5 footer-grid-wthree-agile">
-						<h3>About us</h3>
+						<h3>关于我们</h3>
 						<p>Lorem ipsum dolor sit consectetur elit. Nam eget egestas erat. In hachabi tasse platea dictumst. hachabi tasse platea
 							dictumst
 						</p>
@@ -363,29 +344,27 @@
 							<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
-					<div class="col-md-3 footer-grid-wthree-agile">
-						<h3>Links</h3>
-					<ul class="footer-list">
-							<li> <a href="about.html">About</a> </li>
-							<li> <a href="gallery.html">Gallery</a> </li>
-							<li> <a href="shop.html">Shop</a> </li>
-							<li> <a href="blog.html">Blog</a> </li>
-							<li> <a href="404.html">Events</a> </li>
-							<li> <a href="contact.html">Contact</a> </li>
+					<div class="col-md-3 footer-grid-wthree-agile" style="float: right">
+						<h3>链接</h3>
+						<ul class="footer-list">
+							<li> <a href="/FireFight/about">关于</a> </li>
+							<li> <a href="/FireFight/shop">商城</a> </li>
+							<li> <a href="/FireFight/blog">动态</a> </li>
+							<li> <a href="/FireFight/404">日志</a> </li>
+							<li> <a href="/FireFight/contact">联系我们</a> </li>
 						</ul>
 					</div>
-					<div class="col-md-4 footer-grid-wthree-agile">
-						<h3>Newsletter</h3>
-						<form action="#" method="post">
-							<input type="text" name="text" placeholder="Name" required="">
-							<input type="email" name="Email" placeholder="Email" required="">
-							<input type="submit" value="subscribe now">
-						</form>
-					</div>
+					<!--					<div class="col-md-4 footer-grid-wthree-agile">-->
+					<!--						<h3>Newsletter</h3>-->
+					<!--						<form action="#" method="post">-->
+					<!--							<input type="text" name="text" placeholder="Name" required="">-->
+					<!--							<input type="email" name="Email" placeholder="Email" required="">-->
+					<!--							<input type="submit" value="subscribe now">-->
+					<!--						</form>-->
+					<!--					</div>-->
 					<div class="clearfix"> </div>
 				</div>
 				<div class="copy_right">
-					<p>Copyright &copy; 2018.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
 				</div>
 			</div>
 		</div>

@@ -13,7 +13,7 @@
   <body>
 
   <script type="text/javascript">
-    function fuck() {
+    function userLogin() {
       $.ajax({
         url:'/FireFight/api/user/login',//地址
         dataType:"text",//数据类型
@@ -65,7 +65,7 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form  class="form-validate"  action="/FireFight/api/user/login" method="POST" id="loginFrom">
+                  <form  class="form-validate"  action="/FireFight/api/user/userLogin" method="POST" id="loginFrom">
                     <div class="form-group">
                       <label for="login-userName"></label><input id="login-userName" type="text" name="userName" required data-msg="请输入用户名" placeholder="用户名" value="admin" class="input-material">
                     </div>

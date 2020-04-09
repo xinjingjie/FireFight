@@ -9,6 +9,8 @@ public class User implements Serializable {
     private String password;
     private String telephone;
     private String identify;
+    private String profile_id;
+    private String location;
     @Override
     public String toString() {
         return "User{" +
@@ -61,13 +63,31 @@ public class User implements Serializable {
         this.telephone = telephone;
     }
 
-    public User(int id, String username, String gender, String password, String telephone, String identify) {
+    public String getProfile_id() {
+        return profile_id;
+    }
+
+    public void setProfile_id(String profile_id) {
+        this.profile_id = profile_id;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public User(int id, String username, String gender, String password, String telephone, String identify, String profile_id, String location) {
         this.uid = id;
         this.username = username;
         this.gender = gender;
         this.password = password;
         this.telephone = telephone;
         this.identify = identify;
+        this.profile_id = profile_id;
+        this.location = location;
     }
 
     public String getIdentify() {

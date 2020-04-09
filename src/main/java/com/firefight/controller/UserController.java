@@ -2,12 +2,14 @@ package com.firefight.controller;
 
 import com.firefight.bean.User;
 import com.firefight.service.UserService;
+import com.mysql.cj.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @Controller
@@ -28,27 +30,22 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public ModelAndView login(HttpServletRequest request) throws IOException {
-        ModelAndView modelAndView = new ModelAndView();
+    @RequestMapping(value = "/userLogin",method = RequestMethod.POST)
+    public String login(HttpServletRequest request) throws IOException {
 
         String userName=request.getParameter("userName");
         String passWord=request.getParameter("passWord");
         System.out.println("ssss"+userName+passWord);
        if (UserService.passwordIsRight(userName,passWord)){
            System.out.println("success");
-           if ("normal".equals(UserService.getIdentifyByName(userName))){
-               modelAndView.setViewName("index.html");
-               return modelAndView;
-           }else {
-               modelAndView.setViewName("manger.html");
-               modelAndView.addObject("users", UserService.findAllUser());
-               return modelAndView;
-           }
+           HttpSession session=request.getSession();
+           session.setAttribute("uid",UserService.getIdByName(userName));
+           System.out.println(session.getAttribute("uid"));
+           return "index";
        };
-
-        modelAndView.setViewName("login.html");
-        return modelAndView;  //在视图解析器中配置了前缀后缀
+    return "login";
+//        modelAndView.setViewName("login.html");
+//        return modelAndView;  //在视图解析器中配置了前缀后缀
     }
     @RequestMapping("/register")
     public String register(User user){

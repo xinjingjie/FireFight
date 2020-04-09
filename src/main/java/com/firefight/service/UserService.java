@@ -30,5 +30,6 @@ public interface UserService {
     根据用户名查找身份
      */
     String getIdentifyByName(String username);
+    int getIdByName(String username);
 
 }

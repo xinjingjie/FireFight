@@ -21,8 +21,7 @@ body a {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    -moz-background-size: cover;
-    min-height: 547px;
+	min-height: 547px;
 }
 .news-right p{
     line-height: 1.9em;
