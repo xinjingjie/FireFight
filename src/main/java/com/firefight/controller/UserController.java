@@ -39,8 +39,15 @@ public class UserController {
        if (UserService.passwordIsRight(userName,passWord)){
            System.out.println("success");
            HttpSession session=request.getSession();
-           session.setAttribute("uid",UserService.getIdByName(userName));
-           System.out.println(session.getAttribute("uid"));
+           session.setAttribute("user",UserService.findUserByName(userName));
+//           System.out.println(session.getAttribute("user"));
+           if("manager".equals(UserService.getIdentifyByName(userName))){
+//               ModelAndView modelAndView=new ModelAndView();
+//               modelAndView.addObject("users",UserService.findAllUser());
+//               modelAndView.setViewName("manager/manager.html");
+               session.setAttribute("users",UserService.findAllUser());
+               return "manager/manager";
+           }
            return "index";
        };
     return "login";

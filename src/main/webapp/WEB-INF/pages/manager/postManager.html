@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header" style="height:50px">
-                <div class="top-left-part"><a class="logo" href="manager/manger.html"><b><img src="/FireFight/plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs"><img src="/FireFight/plugins/images/pixeladmin-text.png" alt="home" /></span></a></div>
+                <div class="top-left-part"><a class="logo" href="manager.html"><b><img src="/FireFight/plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs"><img src="/FireFight/plugins/images/pixeladmin-text.png" alt="home" /></span></a></div>
                 <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
                     <div>
                         <form role="search" class="app-search hidden-xs">
@@ -44,7 +44,7 @@
                         </form>
                     </div>
                     <div  style="clear:both; float:right; position:absolute;  right:50px;" >
-                        <a class="profile-pic" href="#"> <img src="/FireFight/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b> </a>
+                        <a class="profile-pic" href="#"> <img src="/FireFight/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><a th:text="${session.user.username}"></a></b> </a>
                     </div>
                 </ul>
             </div>
@@ -57,16 +57,19 @@
             <div class="sidebar-nav navbar-collapse slimscrollsidebar">
                 <ul class="nav" id="side-menu">
                     <li style="padding: 10px 0 0;">
-                        <a href="/FireFight/index" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">Dashboard</span></a>
+                        <a href="/FireFight/manager/manager" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">用户管理</span></a>
                     </li>
                     <li>
-                        <a href="/FireFight/profile" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">Profile</span></a>
+                        <a href="/FireFight/manager/postManager" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">帖子管理</span></a>
                     </li>
                     <li>
-                        <a href="/FireFight/basic-table" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">Basic Table</span></a>
+                        <a href="/FireFight/manager/shopManager" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">商品管理</span></a>
                     </li>
                     <li>
-                        <a href="/FireFight/blank" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
+                        <a href="/FireFight/manager/orderManager" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">订单管理</span></a>
+                    </li>
+                    <li>
+                        <a href="/FireFight/manager/messageManager" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i><span class="hide-menu">留言管理</span></a>
                     </li>
                 </ul>
             </div>

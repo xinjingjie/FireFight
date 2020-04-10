@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<title> Contact</title>
@@ -46,7 +46,7 @@
 					<div class="header_left">
 						<ul>
 							<li><a class="shop" href="/FireFight/shop">Shop Now</a></li>
-							<li ><a class="shop"  href="">账户</a></li>
+							<li ><a class="shop"  href="/FireFight/userProfile">账户</a></li>
 
 						</ul>
 					</div>
@@ -123,7 +123,7 @@
 								<form action="/FireFight/api/message/addMessage" method="post">
 									<div class="col-md-6 col-sm-6 contact_left_grid">
 										<input type="text" name="name" placeholder="昵称" required="">
-										<input type="text" name="titl" placeholder="标题" required="">
+										<input type="text" name="title" placeholder="标题" required="">
 									</div>
 									<div class="col-md-6 col-sm-6 contact_left_grid">
 										<input type="text" name="telephone" placeholder="电话" required="">
