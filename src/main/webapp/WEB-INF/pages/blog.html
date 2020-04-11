@@ -59,21 +59,6 @@
 									<li class="active"><a href="/FireFight/index" data-hover="主页">主页</a></li>
 									<li><a href="/FireFight/about" data-hover="关于">关于</a></li>
 									<li><a href="/FireFight/blog" data-hover="动态">动态</a></li>
-									<!--									<li class="dropdown">-->
-									<!--										<a href="services.html" data-hover="Drop Down" class="dropdown-toggle" data-toggle="dropdown">Drop Down <b class="fa fa-angle-down"></b></a>-->
-									<!--										<ul class="dropdown-menu">-->
-									<!--											<li><a href="404.html">Services</a></li>-->
-									<!--											<li class="divider"></li>-->
-									<!--											<li><a class="s-menu" href="#">Pages <b class="fa fa-angle-right"></b></a>-->
-									<!--												<ul class="dropdown-menu sub-menu">-->
-									<!--													<li><a href="404.html">Error</a></li>-->
-									<!--													<li class="divider"></li>-->
-									<!--													<li><a href="gallery.html">Gallery</a></li>-->
-									<!--												</ul>-->
-									<!--											</li>-->
-
-									<!--										</ul>-->
-									<!--									</li>-->
 
 									<li><a href="/FireFight/contact" data-hover="联系我们">联系我们</a></li>
 								</ul>
@@ -102,64 +87,6 @@
 		<!-- banner -->
 		<!--//banner -->
 
-		<!-- Modal1 -->
-		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-			<div class="modal-dialog">
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-						<div class="signin-form profile">
-							<h3 class="sign">Sign In</h3>
-							<div class="login-form">
-								<form action="#" method="post">
-									<input type="email" name="email" placeholder="E-mail" required="">
-									<input type="password" name="password" placeholder="Password" required="">
-									<div class="tp">
-										<input type="submit" value="Sign In">
-									</div>
-								</form>
-							</div>
-							<div class="login-social-grids">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-rss"></i></a></li>
-								</ul>
-							</div>
-							<p><a href="#" data-toggle="modal" data-target="#myModal3"> Don't have an account?</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- //Modal1 -->
-		<!-- Modal2 -->
-		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
-			<div class="modal-dialog">
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-						<div class="signin-form profile">
-							<h3 class="sign">Sign Up</h3>
-							<div class="login-form">
-								<form action="#" method="post">
-									<input type="text" name="name" placeholder="Username" required="">
-									<input type="email" name="email" placeholder="Email" required="">
-									<input type="password" name="password" placeholder="Password" required="">
-									<input type="password" name="password" placeholder="Confirm Password" required="">
-									<input type="submit" value="Sign Up">
-								</form>
-							</div>
-							<p><a href="#"> By clicking Sign up, I agree to your terms</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- //Modal2 -->
 	</div>
 	<!--// header_top -->
@@ -167,44 +94,14 @@
 	<div class="ab_content">
 		<div class="container">
 			<h3 class="tittle-w3ls">动态</h3>
-			<div class="inner_sec_info_w3ls_agile">
+			<div class="inner_sec_info_w3ls_agile" th:each="blog:${allBlogs}">
 						<div class="blog_con">
 							<div class="blog_info">
-								<h4>2nd / Nov 2017</h4>
-								<h5><a href="single.html">Consectetur adipiscing elit</a></h5>
-								<p>Pellentesque eleifend ultricies tellus,varius risus, id dignissim sapien velit id felis ac cursus eros.</p>
+								<h4 th:text="${blog.create_time}">2nd / Nov 2017</h4>
+								<h5><a th:text="${blog.title}">Consectetur adipiscing elit</a></h5>
+								<p th:text="${blog.content}">Pellentesque eleifend ultricies tellus,varius risus, id dignissim sapien velit id felis ac cursus eros.</p>
 							</div>
 						</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="inner_sec_info_w3ls_agile">
-				<div class="blog_con">
-					<div class="blog_info">
-						<h4>2nd / Nov 2017</h4>
-						<h5><a href="single.html">Consectetur adipiscing elit</a></h5>
-						<p>Pellentesque eleifend ultricies tellus,varius risus, id dignissim sapien velit id felis ac cursus eros.</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="inner_sec_info_w3ls_agile">
-				<div class="blog_con">
-					<div class="blog_info">
-						<h4>2nd / Nov 2017</h4>
-						<h5><a href="single.html">Consectetur adipiscing elit</a></h5>
-						<p>Pellentesque eleifend ultricies tellus,varius risus, id dignissim sapien velit id felis ac cursus eros.</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="inner_sec_info_w3ls_agile">
-				<div class="blog_con">
-					<div class="blog_info">
-						<h4>2nd / Nov 2017</h4>
-						<h5><a href="single.html">Consectetur adipiscing elit</a></h5>
-						<p>Pellentesque eleifend ultricies tellus,varius risus, id dignissim sapien velit id felis ac cursus eros.</p>
-					</div>
-				</div>
 				<div class="clearfix"> </div>
 			</div>
 

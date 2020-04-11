@@ -19,13 +19,16 @@ public class BlogController {
  @Autowired
  private BlogServiceImpl blogService;
     @PostMapping("postBlog")
-    public String postBlog(Blog blog){
+    public ModelAndView postBlog(Blog blog){
         SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         String format = sf.format(new Date());
         blog.setCreate_time(format);
         System.out.println(blog);
         blogService.addBlog(blog);
-        return "/manager/postManager";
+        ModelAndView modelAndView=new ModelAndView();
+        modelAndView.setViewName("manager/postManager");
+        modelAndView.addObject("allBlogs",blogService.findNew());
+        return modelAndView;
     }
 
     @GetMapping("/newBlogs")
@@ -35,5 +38,10 @@ public class BlogController {
         modelAndView.addObject("allBlogs",blogService.findNew());
         return modelAndView;
     }
-
+@GetMapping("/allBlog")
+    public ModelAndView allBlog(){
+    ModelAndView modelAndView=new ModelAndView("blog");
+    modelAndView.addObject("allBlogs",blogService.findNew());
+    return modelAndView;
+}
 }
