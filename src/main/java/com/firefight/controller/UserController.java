@@ -4,6 +4,7 @@ import com.firefight.bean.User;
 import com.firefight.service.UserService;
 import com.mysql.cj.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -58,5 +59,35 @@ public class UserController {
     public String register(User user){
         UserService.addUser(user);
         return "login";  //在视图解析器中配置了前缀后缀
+    }
+    @RequestMapping(value = "/updateInfo",method = RequestMethod.POST)
+    @ResponseBody
+    public String updateUser(User user,HttpServletRequest request){
+        System.out.println("this method did");
+        System.out.println(user);
+        HttpSession session=request.getSession();
+
+        User u=(User)session.getAttribute("user");
+        user.setUid(u.getUid());
+
+//       User user=new User();
+//       user.setUsername(request.getParameter("username"));
+//       user.setGender(request.getParameter("gender"));
+//       user.setTelephone(request.getParameter("telephone"));
+//       user.setProfile_id(request.getParameter("profile_id"));
+//       user.setLocation(request.getParameter("location"));
+
+//        if (!UserService.isUserExist(user.getUsername())){
+//            System.out.println("repeat");
+//            return "usernameRepeat";
+//        }else
+            if (!UserService.isUserExistByProfileId(user.getProfile_id())){
+            System.out.println("repeat");
+            return "profile_idRepeat";
+        }else {
+            session.setAttribute("user",UserService.findUserByName(user.getUsername()));
+            System.out.println("success");
+            UserService.updateUser(user);
+            return "success";}
     }
 }

@@ -49,4 +49,22 @@ public class UserServiceImpl implements UserService {
     public int getIdByName(String username) {
         return userDao.getIdByName(username);
     }
+
+    /*
+    返回true代表没有此用户名
+     */
+    @Override
+    public boolean isUserExist(String username) {
+        return userDao.isUserExist(username)==0;
+    }
+
+    @Override
+    public int updateUser(User user) {
+        return userDao.updateUser(user);
+    }
+
+    @Override
+    public boolean isUserExistByProfileId(String profile_id) {
+        return userDao.isUserExistByProfileId(profile_id)==0;
+    }
 }

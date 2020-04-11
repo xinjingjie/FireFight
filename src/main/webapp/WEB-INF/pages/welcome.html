@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Home</title>
+    <!--/tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--//tags -->
+    <link href="/FireFight/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/FireFight/css/style2.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/FireFight/css/font-awesome.css" rel="stylesheet">
+    <!-- //for bootstrap working -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+          rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<!--<script type="text/javascript">-->
+<!--	function login() {-->
+
+<!--		if ((document.getElementById("login-username").value=="")||(document.getElementById("login-password").value==""))-->
+<!--		{-->
+<!--			alert("请填写完整")-->
+<!--			return;-->
+<!--		}-->
+<!--		$.ajax({-->
+<!--			url:'/FireFight/api/user/userLogin',//地址-->
+<!--			dataType:"text",//数据类型-->
+<!--			cache:false,-->
+<!--			async:false,-->
+<!--			data:$('#loginForm').serialize(),-->
+<!--			type:'POST',//类型-->
+<!--			timeout:2000,//超时-->
+<!--			//请求成功-->
+<!--			success:function(data){-->
+
+<!--				if ("success"===data){-->
+<!--					window.location.href="/FireFight/index";-->
+
+<!--					document.getElementById("sign_Button").style.display="none";-->
+<!--					document.getElementById("sign_Button").style.display="inline";-->
+
+<!--				}else-->
+<!--				{-->
+<!--					alert("登录失败");-->
+<!--				}-->
+<!--			},-->
+<!--			//失败/超时-->
+<!--			error:function(XMLHttpRequest,textStatus){-->
+<!--				if(textStatus==='timeout'){-->
+<!--					alert('請求超時');-->
+<!--					setTimeout(function(){-->
+<!--						alert('重新请求');-->
+<!--					},2000);-->
+<!--				}-->
+<!--				//alert(errorThrown);-->
+<!--			}-->
+<!--		})-->
+<!--	}-->
+<!--</script>-->
+<!-- header_top -->
+<div class="header" id="home">
+    <div class="banner_header_top_agile_w3ls">
+        <div class="header-top-wthree-agileits">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1><a class="navbar-brand" href="index.html"> 消防</a></h1>
+                </div>
+                <div class="header_left" >
+                    <ul>
+                        <li><a class="shop" href="/FireFight/shop">Shop Now</a></li>
+                        <li ><a class="shop"  href="/FireFight/login">登录</a></li>
+
+                        <!--							<li ><a class="shop"  href="/FireFight/userLogin">登录</a></li>-->
+                        <!--							<i class="fa fa-user" aria-hidden="true"></i>-->
+                    </ul>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
+                    <div class="top_nav_left">
+                        <nav class="cl-effect-15" id="cl-effect-15">
+                            <ul>
+                                <li class="active"><a href="/FireFight/index" data-hover="主页">主页</a></li>
+                                <li><a href="/FireFight/about" data-hover="关于">关于</a></li>
+                                <li><a href="/FireFight/blog" data-hover="动态">动态</a></li>
+                                <!--									<li class="dropdown">-->
+                                <!--										<a href="services.html" data-hover="Drop Down" class="dropdown-toggle" data-toggle="dropdown">Drop Down <b class="fa fa-angle-down"></b></a>-->
+                                <!--										<ul class="dropdown-menu">-->
+                                <!--											<li><a href="404.html">Services</a></li>-->
+                                <!--											<li class="divider"></li>-->
+                                <!--											<li><a class="s-menu" href="#">Pages <b class="fa fa-angle-right"></b></a>-->
+                                <!--												<ul class="dropdown-menu sub-menu">-->
+                                <!--													<li><a href="404.html">Error</a></li>-->
+                                <!--													<li class="divider"></li>-->
+                                <!--													<li><a href="gallery.html">Gallery</a></li>-->
+                                <!--												</ul>-->
+                                <!--											</li>-->
+
+                                <!--										</ul>-->
+                                <!--									</li>-->
+
+                                <li><a href="/FireFight/contact" data-hover="联系我们">联系我们</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- search -->
+                <div class="search">
+                    <div class="cd-main-header">
+                        <ul class="cd-header-buttons">
+                            <li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+                        </ul>
+                    </div>
+                    <div id="cd-search" class="cd-search">
+                        <form action="#" method="post">
+                            <input name="Search" type="search" placeholder="Click enter after typing...">
+                        </form>
+                    </div>
+                </div>
+                <!-- //search -->
+                <div class="clearfix"></div>
+            </nav>
+        </div>
+    </div>
+    <!-- banner -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>消防安全<span>是</span></h3>
+                        <h4>关系社会稳定、经济发展的大事</h4>
+                        <!--							<p>Add Some Description</p>-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>消防事关你我他, <span></span></h3>
+                        <h4>安全系着千万家</h4>
+                        <!--							<p>Add Some Description</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>消除火灾隐患, <span></span></h3>
+                        <h3>构建和谐社会</h3>
+                        <!--							<p>Add Some Description</p>-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="item item4">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>时时注意安全,<span></span></h3>
+                        <h4>处处预防火灾 </h4>
+                        <!--							<p>Add Some Description</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!-- The Modal -->
+    </div>
+    <!--//banner -->
+    <!--//banner -->
+
+    <!-- Modal1 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <div class="signin-form profile">
+                        <h3 class="sign">登录</h3>
+                        <div class="login-form">
+                            <form id="loginForm">
+                                <input type="email" id="login-username" name="userName" placeholder="用户名" required="">
+                                <input type="password" id="login-password" name="passWord" placeholder="密码" required="">
+                                <div class="tp">
+                                    <input type="button" id="login_button" onclick="login()" value="登录">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="login-social-grids">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                        <p><a href="#" data-toggle="modal" data-target="#myModal3"> Don't have an account?</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal1 -->
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <div class="signin-form profile">
+                        <h3 class="sign">注册</h3>
+                        <div class="login-form">
+                            <form action="#" method="post">
+                                <input type="text" name="name" placeholder="userName" required="">
+                                <input type="email" name="email" placeholder="" required="">
+                                <input type="password" name="password" placeholder="Password" required="">
+                                <input type="password" name="password" placeholder="Confirm Password" required="">
+                                <input type="submit" value="Sign Up">
+                            </form>
+                        </div>
+                        <p><a href="#"> By clicking Sign up, I agree to your terms</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal2 -->
+</div>
+<!--// header_top -->
+<!--about-->
+<div class="ab_content">
+    <div class="container">
+        <h3 class="tittle-w3ls">关于我们</h3>
+        <div class="about-top">
+            <h3 class="subheading">为小区用户提供各种消防服务</h3>
+            <!--				<p class="paragraph">
+            提供消防信息的查看 提供消防知识的普及 提供消防用品的购买
+            普及消防知识，提高消防安全意识，全面做好消防安全的预防及处置工作-->
+            <!--				</p>-->
+            <p class="paragraph">
+                火灾是严重威胁人类生存与发展的灾害之一,火灾的发生具有频率高、时空跨度大的特点,造成的损失也非常严重。加强消防安全管理是头等大事。而预防火灾,消除火灾的安全隐患尤为重要。
+                “隐患险于明火,防范胜于救灾,责任重于泰山”是消防安全的主旨。因此,小区要配备基本的灭火器、火灾报警系统等设备,让所有住户都了解各种消防设施的性能、掌握灭火器材的使用方法;
+                掌握报火警、扑救初起火灾和自救逃生的知识和技能等。
+            </p>
+        </div>
+    </div>
+</div>
+<!--//about-->
+<!--/works-->
+<div class="works" style="background:#CCCCCC;">
+    <div class="container">
+        <h3 class="tittle-w3ls cen">我们提供什么</h3>
+        <div class="inner_sec_info_w3ls_agile">
+            <div class="ser-first">
+                <div class="col-md-3 ser-first-grid text-center">
+                    <span class="fa fa-shield" aria-hidden="true"></span>
+                    <h3>安全的后盾</h3>
+                    <p>为小区提供安全的消防后盾，消灭每一处安全隐患.</p>
+                </div>
+                <div class="col-md-3 ser-first-grid text-center">
+                    <span class="fa fa-pencil" aria-hidden="true"></span>
+                    <h3>消防日志</h3>
+                    <p>每天为大家提供今天的消防举措和每次的消防日志.</p>
+                </div>
+                <div class="col-md-3 ser-first-grid text-center">
+                    <span class="fa fa-star" aria-hidden="true"></span>
+                    <h3>消防知识的普及</h3>
+                    <p>为大家普及消防安全的知识和消防道具的使用.</p>
+                </div>
+                <div class="col-md-3 ser-first-grid text-center">
+                    <span class="fa fa-thumbs-up" aria-hidden="true"></span>
+                    <h3>消防用品的购买</h3>
+                    <p>为住户提供消防用品的购买.</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--/works-->
+
+
+<!--/ pricing-->
+
+<!-- Popup-Box -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <div class="pop_up">
+                    <div class="payment-online-form-left">
+                        <form action="#" method="post">
+                            <h4>Personal Details</h4>
+                            <ul>
+                                <li><input type="text" name="First Name" placeholder="First Name" required=""></li>
+                                <li><input type="text" name="Last Name" placeholder="Last Name" required=""></li>
+                            </ul>
+                            <ul>
+                                <li><input type="email" class="email" name="Email" placeholder="Email" required=""></li>
+                                <li><input type="text" name="Number" placeholder="Mobile Number" required=""></li>
+                            </ul>
+                            <textarea name="Message" placeholder="Address..." required></textarea>
+                            <div class="clearfix"></div>
+
+                            <ul class="payment-sendbtns">
+                                <li><input type="reset" value="Reset"></li>
+                                <li><input type="submit" name="Send" value="Send"></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Popup-Box -->
+
+<!--// pricing-->
+
+<!-- Testimonials -->
+<!--	<div class="testimonials">-->
+<!--		<div class="container">-->
+<!--			<h3 class="tittle-w3ls">What people says</h3>-->
+<!--			<div class="inner_sec_info_w3ls_agile">-->
+<!--				<div class="col-md-6 testimonials-main">-->
+<!--						<div class="carousel slide two" data-ride="carousel" id="quote-carousel">-->
+<!--							&lt;!&ndash; Bottom Carousel Indicators &ndash;&gt;-->
+<!--							<ol class="carousel-indicators two">-->
+<!--								<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>-->
+<!--								<li data-target="#quote-carousel" data-slide-to="1"></li>-->
+<!--								<li data-target="#quote-carousel" data-slide-to="2"></li>-->
+<!--							</ol>-->
+
+<!--						<div class="carousel-inner">-->
+<!--								<div class="item active">-->
+
+<!--									<div class="inner-testimonials">-->
+<!--										<img src="/FireFight/images/1.jpg" alt=" " class="img-responsive" />-->
+<!--										<div class="teastmonial-info">-->
+<!--											<h5>Andy Wovel</h5>-->
+<!--											<span>Lorem Ipsum</span>-->
+<!--											<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit lobortis elementum, Quis nostrum exercitationem-->
+<!--												ullam corporis suscipit laboriosam. </p>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<div class="item">-->
+
+<!--									<div class="inner-testimonials">-->
+<!--										<img src="/FireFight/images/2.jpg" alt=" " class="img-responsive" />-->
+<!--										<div class="teastmonial-info">-->
+<!--											<h5>Bernard Russo</h5>-->
+<!--											<span>Lorem Ipsum</span>-->
+<!--											<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit lobortis elementum, Quis nostrum exercitationem-->
+<!--												ullam corporis suscipit laboriosam. </p>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<div class="item">-->
+
+<!--									<div class="inner-testimonials">-->
+<!--										<img src="/FireFight/images/3.jpg" alt=" " class="img-responsive" />-->
+<!--										<div class="teastmonial-info">-->
+<!--											<h5>Alex Merphy</h5>-->
+<!--											<span>Lorem Ipsum</span>-->
+<!--											<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit lobortis elementum, Quis nostrum exercitationem-->
+<!--												ullam corporis suscipit laboriosam. </p>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; Carousel Buttons Next/Prev &ndash;&gt;-->
+<!--							<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>-->
+<!--							<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>-->
+
+<!--						</div>-->
+<!--				</div>-->
+
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!-- //Testimonials -->
+<!-- footer -->
+<footer>
+    <div class="footer-top-w3-agileits">
+        <div class="container">
+            <div class="footer-grid-wthree-agiles">
+                <div class="col-md-5 footer-grid-wthree-agile">
+                    <h3>About us</h3>
+                    <p>Lorem ipsum dolor sit consectetur elit. Nam eget egestas erat. In hachabi tasse platea dictumst. hachabi tasse platea
+                        dictumst
+                    </p>
+                    <p>Lorem ipsum dolor sit consectetur elit. Nam eget egestas erat. In hachabi tasse platea dictumst.</p>
+                    <ul class="footer_list_icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid-wthree-agile" style="float: right">
+                    <h3>链接</h3>
+                    <ul class="footer-list">
+                        <li> <a href="/FireFight/about">关于</a> </li>
+                        <li> <a href="/FireFight/shop">商城</a> </li>
+                        <li> <a href="/FireFight/blog">动态</a> </li>
+                        <li> <a href="/FireFight/404">日志</a> </li>
+                        <li> <a href="/FireFight/contact">联系我们</a> </li>
+                    </ul>
+                </div>
+                <!--					<div class="col-md-4 footer-grid-wthree-agile">-->
+                <!--						<h3>Newsletter</h3>-->
+                <!--						<form action="#" method="post">-->
+                <!--							<input type="text" name="text" placeholder="Name" required="">-->
+                <!--							<input type="email" name="Email" placeholder="Email" required="">-->
+                <!--							<input type="submit" value="subscribe now">-->
+                <!--						</form>-->
+                <!--					</div>-->
+                <div class="clearfix"> </div>
+            </div>
+            <div class="copy_right">
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- //footer -->
+<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- js -->
+<script type="text/javascript" src="/FireFight/js/jquery-2.1.4.min.js"></script>
+
+<!--search-bar-->
+<script src="/FireFight/js/search.js"></script>
+<!--//search-bar-->
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="/FireFight/js/move-top.js"></script>
+<script type="text/javascript" src="/FireFight/js/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000);
+        });
+    });
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- Pricing-Popup-Box-JavaScript -->
+<script src="/FireFight/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<!-- //Pricing-Popup-Box-JavaScript -->
+<script>
+    $('ul.dropdown-menu li').hover(function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+</script>
+<!-- js for portfolio lightbox -->
+<script src="/FireFight/js/jquery.chocolat.js "></script>
+<link rel="stylesheet " href="/FireFight/css/chocolat.css " type="text/css " media="screen ">
+<!--light-box-files -->
+<script type="text/javascript ">
+    $(function () {
+        $('.portfolio-grids a').Chocolat();
+    });
+</script>
+<!-- /js for portfolio lightbox -->
+
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+        };
+        */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+
+<script type="text/javascript" src="/FireFight/js/bootstrap.js"></script>
+</body>
+
+</html>

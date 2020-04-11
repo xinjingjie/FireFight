@@ -1,10 +1,7 @@
 package com.firefight.dao;
 
 import com.firefight.bean.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -45,4 +42,22 @@ public interface UserDao {
      */
     @Select("select uid from user where username=#{username}")
     int getIdByName(String username);
+
+    /*
+    更新用户信息
+     */
+    @Update("update user set username=#{username},gender=#{gender},telephone=#{telephone},profile_id=#{profile_id},location=#{location} where uid=#{uid}")
+    int updateUser(User user);
+
+    /*
+    根据用户名查看用户是否存在
+     */
+    @Select("select count(*) from user where username=#{username}")
+    int isUserExist(String username);
+
+    /*
+        根据用户名查看身份证号是否存在
+         */
+    @Select("select count(*) from user where profile_id=#{profile_id}")
+    int isUserExistByProfileId(String profile_id);
 }

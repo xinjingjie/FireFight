@@ -31,5 +31,8 @@ public interface UserService {
      */
     String getIdentifyByName(String username);
     int getIdByName(String username);
+    boolean isUserExist(String username);
+    int updateUser(User user);
+    boolean isUserExistByProfileId(String profile_id);
 
 }

@@ -11,12 +11,18 @@ public class User implements Serializable {
     private String identify;
     private String profile_id;
     private String location;
+
     @Override
     public String toString() {
         return "User{" +
-                "id=" + uid +
-                ", name='" + username + '\'' +
+                "uid=" + uid +
+                ", username='" + username + '\'' +
                 ", gender='" + gender + '\'' +
+                ", password='" + password + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", identify='" + identify + '\'' +
+                ", profile_id='" + profile_id + '\'' +
+                ", location='" + location + '\'' +
                 '}';
     }
 

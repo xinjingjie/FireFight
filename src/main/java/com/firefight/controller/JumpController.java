@@ -13,8 +13,12 @@ public class JumpController {
     public String go(@PathVariable("name") String what){
         return what;  //在视图解析器中配置了前缀后缀
     }
-    @RequestMapping("/{name1}/{name2}")
-    public String goNext(@PathVariable("name1") String parent,@PathVariable("name2") String child){
-        return parent+"/"+child;  //在视图解析器中配置了前缀后缀
+    @RequestMapping("/manager/{name}")
+    public String goNext(@PathVariable("name") String child){
+        return "manager/"+child;  //在视图解析器中配置了前缀后缀
+    }
+    @RequestMapping("/")
+    public String index(){
+        return "welcome";
     }
 }

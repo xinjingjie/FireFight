@@ -9,15 +9,54 @@
     <link href="/FireFight/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/FireFight/css/style2.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/FireFight/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="/FireFight/js/jquery-2.1.4.min.js"></script>
 
-    <script type="application/x-javascript">
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
+    <script type="text/javascript">function updateInfo() {
+        if (document.getElementById("edit-username").value==""){
+            alert("请填写用户名！");
+            return;
         }
+        $.ajax({
+            url:'/FireFight/api/user/updateInfo',//地址
+            dataType:"text",//数据类型
+            cache:false,
+            data:$('#editForm').serialize(),
+            type:'POST',//类型
+            timeout:2000,//超时
+            //请求成功
+            success:function(data){
+                if ("success"===data){
+                    // window.location.href="/FireFight/userProfile";
+                    alert("修改成功！")
+                }
+                // else if("usernameRepeat"===data)
+                // {
+                //     alert("用户名重复！");
+                // }
+                else if("profile_idRepeat"===data){
+                    alert("身份证号重复！");
+                }
+            },
+            //失败/超时
+            error:function(XMLHttpRequest,textStatus){
+                if(textStatus==='timeout'){
+                    alert('請求超時');
+                    setTimeout(function(){
+                        alert('重新请求');
+                    },2000);
+                }
+                //alert(errorThrown);
+            }
+        })
+    }
+
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
     </script>
     <!-- //for bootstrap working -->
     <link href="http://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
@@ -55,22 +94,6 @@
                                 <li class="active"><a href="/FireFight/index" data-hover="主页">主页</a></li>
                                 <li><a href="/FireFight/about" data-hover="关于">关于</a></li>
                                 <li><a href="/FireFight/blog" data-hover="动态">动态</a></li>
-                                <!--									<li class="dropdown">-->
-                                <!--										<a href="services.html" data-hover="Drop Down" class="dropdown-toggle" data-toggle="dropdown">Drop Down <b class="fa fa-angle-down"></b></a>-->
-                                <!--										<ul class="dropdown-menu">-->
-                                <!--											<li><a href="404.html">Services</a></li>-->
-                                <!--											<li class="divider"></li>-->
-                                <!--											<li><a class="s-menu" href="#">Pages <b class="fa fa-angle-right"></b></a>-->
-                                <!--												<ul class="dropdown-menu sub-menu">-->
-                                <!--													<li><a href="404.html">Error</a></li>-->
-                                <!--													<li class="divider"></li>-->
-                                <!--													<li><a href="gallery.html">Gallery</a></li>-->
-                                <!--												</ul>-->
-                                <!--											</li>-->
-
-                                <!--										</ul>-->
-                                <!--									</li>-->
-
                                 <li><a href="/FireFight/contact" data-hover="联系我们">联系我们</a></li>
                             </ul>
                         </nav>
@@ -106,49 +129,41 @@
     </div>
         <div class="col-md-8 col-xs-12">
             <div class="white-box">
-                <form class="form-horizontal form-material">
+                <form id="editForm"  class="form-horizontal form-material" >
                     <div class="form-group">
                         <label class="col-md-12">用户名</label>
                         <div class="col-md-12">
-                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line"> </div>
+                            <input id="edit-username" type="text" name="username" th:value="${session.user.username}" class="form-control form-control-line"> </div>
                     </div>
                     <div class="form-group">
-                        <label for="example-email" class="col-md-12">邮箱</label>
+                        <label  class="col-md-12">性别</label>
                         <div class="col-md-12">
-                            <input type="email" placeholder="johnathan@admin.com" class="form-control form-control-line" name="example-email" id="example-email"> </div>
+                            <input type="text" name="gender" placeholder="在这里完善您的信息" th:value="${session.user.gender}" class="form-control form-control-line" > </div>
                     </div>
-                    <!-- 密码-->
-<!--                    <div class="form-group">-->
-<!--                        <label class="col-md-12">Password</label>-->
-<!--                        <div class="col-md-12">-->
-<!--                            <input type="password" value="password" class="form-control form-control-line"> </div>-->
-<!--                    </div>-->
                     <div class="form-group">
                         <label class="col-md-12">电话</label>
                         <div class="col-md-12">
-                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line"> </div>
+                            <input type="text" name="telephone" placeholder="在这里完善您的电话号码" th:value="${session.user.telephone}" class="form-control form-control-line"> </div>
                     </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-12">身份证号</label>
+                        <div class="col-sm-12">
+                            <input type="text" name="profile_id" placeholder="在这里完善您的身份证号" th:value="${session.user.profile_id}"
+                                   class="form-control form-control-line"/>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label class="col-md-12">地址</label>
                         <div class="col-md-12">
-                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                            <textarea rows="3" name="location" placeholder="在这里完善您的地址"  class="form-control form-control-line" th:utext="${session.user.location}"></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-12">楼层</label>
-                        <div class="col-sm-12">
-                            <select class="form-control form-control-line">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <button class="btn btn-success">更新信息</button>
+                            <input type="button" class="btn btn-success" onclick="updateInfo()" value="更新信息"/>
                         </div>
                     </div>
                 </form>
